@@ -20,6 +20,7 @@ func HandlerPing(w http.ResponseWriter, req *http.Request) {
 func main() {
 	// Checking directory for html templates
 	fmt.Printf("DIR TEMPLATE: %s\n", os.Getenv("DIR_TEMPLATE"))
+	fmt.Printf("STATIC FOLDER: %s\n", os.Getenv("STATIC_FOLDER"))
 	// Starting pool
 	pool := ws.NewPool()
 	go pool.Start()
@@ -34,9 +35,10 @@ func main() {
 
 	// Adding Admin Html handler
 	handlers.NewAdminHandler(r)
-	// Adming Client Html handler
+	// Adding Client Html handler
 	handlers.NewClientHandler(r)
-
+	// Adding Static folder handler
+	handlers.NewStaticHandler(r)
 	// Run server
 	http.ListenAndServe(":8080", r)
 }
