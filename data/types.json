@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Grass",
+
+        "super_effective": [2]
+    },
+    {
+        "id": 2,
+        "name": "Water",
+
+        "super_effective": [3]
+    },
+    {
+        "id": 3,
+        "name": "Fire",
+
+        "super_effective": [1,8]
+    },
+    {
+        "id": 4,
+        "name": "Normal",
+
+        "super_effective": []
+    },
+    {
+        "id": 5,
+        "name": "Flying",
+
+        "super_effective": [1]
+    },
+    {
+        "id": 6,
+        "name": "Electric",
+
+        "super_effective": [2,5]
+    },
+    {
+        "id": 7,
+        "name": "Dragon",
+
+        "super_effective": [7]
+    },
+    {
+        "id": 8,
+        "name": "Ice",
+
+        "super_effective": [7]
+    }
+]

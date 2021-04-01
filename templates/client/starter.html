@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Client view</title>
+    <style>
+      p {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>My current starter</h2>
+
+    <div>
+      <p>My starter is: <span id="starter"></span></p>
+    </div>
+
+    <script>
+        let socket = new WebSocket("ws://127.0.0.1:8080/ws");
+        console.log("Attempting Connection...");
+
+        socket.onopen = () => {
+            console.log("Successfully Connected");
+        };
+
+        socket.onclose = event => {
+            console.log("Socket Closed Connection: ", event);
+            socket.send("Client Closed!")
+        };
+
+        socket.onerror = error => {
+            console.log("Socket Error: ", error);
+        };
+
+        // Listen the messages
+        socket.addEventListener('message', function (event) {
+          console.log('Message from server', event.data);
+          const dataDecoded = JSON.parse(event.data);
+          if (dataDecoded['body']['starterId'] != null) {
+            document.getElementById("starter").innerHTML = dataDecoded['body']['starterId'];
+          }
+        });
+
+    </script>
+  </body>
+</html>
