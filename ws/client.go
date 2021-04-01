@@ -18,8 +18,12 @@ type Message struct {
 	Body interface{} `json:"body"`
 }
 
-type PokemonStarter struct {
+type StarterIncoming struct {
 	StarterId int `json:"starterId"`
+}
+
+type StarterOutcoming struct {
+	StarterName string `json:"starterName"`
 }
 
 func (c *Client) Read() {
@@ -30,7 +34,7 @@ func (c *Client) Read() {
 
 	for {
 		// Handle message from WebClient
-		var starter PokemonStarter
+		var starter StarterIncoming
 		err := c.Conn.ReadJSON(&starter)
 
 		if err != nil {
@@ -39,8 +43,18 @@ func (c *Client) Read() {
 		}
 
 		// handle incoming message to get an appropiate outcoming message
+		response := &StarterOutcoming{}
 
-		message := Message{Body: starter}
+		switch starter.StarterId {
+			case 1:
+				response.StarterName = "Bulbasaur"
+			case 4:
+				response.StarterName = "Squirtle"
+			case 7:
+				response.StarterName = "Charmander"
+		}
+
+		message := Message{Body: response}
 		c.Pool.Broadcast <- message
 		fmt.Printf("Message Received: %+v\n", message)
 	}

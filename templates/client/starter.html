@@ -7,7 +7,9 @@
     <title>Client view</title>
     <style>
       p {
-        color: aqua;
+        color: white;
+        background-color: blue;
+        font-family: Monospace;
       }
     </style>
   </head>
@@ -17,7 +19,7 @@
     <div>
       <p>My starter is: <span id="starter"></span></p>
       <div>
-        <img src="https://static.wikia.nocookie.net/espokemon/images/0/00/Bulbasaur_XY.gif"/>
+        <img id="starterPic" src=""/>
       </div>
     </div>
 
@@ -42,8 +44,13 @@
         socket.addEventListener('message', function (event) {
           console.log('Message from server', event.data);
           const dataDecoded = JSON.parse(event.data);
-          if (dataDecoded['body']['starterId'] != null) {
-            document.getElementById("starter").innerHTML = dataDecoded['body']['starterId'];
+          if (dataDecoded['body']['starterName'] != null) {
+            const starterName = dataDecoded['body']['starterName'];
+            document.getElementById("starter").innerHTML = starterName;
+            document.getElementById("starterPic").src = "/static/img/"+starterName+".gif"
+          } else {
+            document.getElementById("starter").innerHTML = "";
+            document.getElementById("starterPic").src = "";
           }
         });
 
