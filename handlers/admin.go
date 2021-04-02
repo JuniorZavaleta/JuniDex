@@ -25,7 +25,7 @@ func NewAdminHandler(r *mux.Router) {
 
 func (h *AdminHandler) adminView(w http.ResponseWriter, r *http.Request) {
 	team := &PokemonTeam{}
-	t, err := template.ParseFiles(helpers.GetTemplateFilepath("admin", "pokemon.html"))
+	t, err := template.ParseFiles(helpers.GetTemplateFilepath("admin", "starter.html"))
 
 	if err != nil {
 		log.Panic(err)

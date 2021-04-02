@@ -40,7 +40,7 @@
         starter.addEventListener('change', (event) => {
           const starterId = parseInt(event.target.value);
 
-          socket.send(JSON.stringify({"starterId": starterId}));
+          socket.send(JSON.stringify({"body": {"starterId": [starterId]}}));
         });
     </script>
   </body>

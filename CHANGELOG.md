@@ -1,5 +1,15 @@
 # CHANGELOG
 
-[0.1.0-SNAPSHOT] 2021-04-01
+[0.2.0] XXXX-XX-XX
+> TODO
+- Up to 6 members
+- Change styles
+- Add more pokemon to json file
 
-- Basic connection between Admin and Client with WebSockets - Change starter and pull image from Internet
+[0.1.1] 2021-04-02
+> Added
+- Team Manager for Kanto's starters (3 members) using local JSON
+- Connection between Admin and Client with WebSockets
+
+> Fixed
+- Show Starter was failing after changes for Team Manager
