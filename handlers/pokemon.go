@@ -27,7 +27,8 @@ func (h *HttpRestHandler) GetPokemon(w http.ResponseWriter, req *http.Request) {
 	log.Printf("Pokemon ID requested %s", vars["id"])
 	bulbasaur := entities.Pokemon{}
 	bulbasaur.Name = "Bulbasaur"
-	*bulbasaur.TypeOne = entities.GrassType()
+	bulbasaur.TypeOne = "Grass"
+	bulbasaur.TypeTwo = "Poison"
 
 	json.NewEncoder(w).Encode(bulbasaur)
 }

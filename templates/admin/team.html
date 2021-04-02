@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pokemon Team</title>
+  </head>
+  <body>
+    <h2>Manage Pokemon Team</h2>
+
+    <!-- TODO : Get all pokemon and use select2 -->
+    <div>
+      <label>Pokemon 1</label>
+      <select id="pokemon1">
+        <option value="1">Bulbasaur</option>
+        <option value="4">Squirtle</option>
+        <option value="7">Charmander</option>
+      </select>
+    </div>
+    <div>
+      <label>Pokemon 2</label>
+      <select id="pokemon2">
+        <option value="2">Ivysaur</option>
+        <option value="5">Wartortle</option>
+        <option value="8">Charmeleon</option>
+      </select>
+    </div>
+    <div>
+      <label>Pokemon 3</label>
+      <select id="pokemon3">
+        <option value="1">Bulbasaur</option>
+        <option value="4">Squirtle</option>
+        <option value="7">Charmander</option>
+      </select>
+    </div>
+
+    <script>
+        let socket = new WebSocket("ws://127.0.0.1:8080/ws");
+        console.log("Attempting Connection...");
+
+        socket.onopen = () => {
+            console.log("Successfully Connected");
+        };
+
+        socket.onclose = event => {
+            console.log("Socket Closed Connection: ", event);
+            socket.send("Client Closed!")
+        };
+
+        socket.onerror = error => {
+            console.log("Socket Error: ", error);
+        };
+
+        var pokemon1 = document.getElementById("pokemon1");
+        var pokemon2 = document.getElementById("pokemon2");
+        var pokemon3 = document.getElementById("pokemon3");
+        let team = [0,0,0,0,0,0]
+
+        function updatePokemonTeam (team) {
+          socket.send(JSON.stringify({"body": {"team": team}}));
+        }
+
+        pokemon1.addEventListener('change', (event) => {
+          team[0] = parseInt(event.target.value);
+          updatePokemonTeam(team);
+        });
+
+        pokemon2.addEventListener('change', (event) => {
+          team[1] = parseInt(event.target.value);
+          updatePokemonTeam(team);
+        });
+
+        pokemon3.addEventListener('change', (event) => {
+          team[2] = parseInt(event.target.value);
+          updatePokemonTeam(team);
+        });
+    </script>
+  </body>
+</html>

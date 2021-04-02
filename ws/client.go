@@ -2,6 +2,7 @@ package ws
 
 import (
 	"fmt"
+	"junidex/repo"
 	"log"
 
 	"github.com/gorilla/websocket"
@@ -18,12 +19,12 @@ type Message struct {
 	Body interface{} `json:"body"`
 }
 
-type StarterIncoming struct {
-	StarterId int `json:"starterId"`
+type RequestIncoming struct {
+	Body map[string][]interface{} `json:"body"`
 }
 
-type StarterOutcoming struct {
-	StarterName string `json:"starterName"`
+type RequestOutcoming struct {
+	Body map[string]interface{} `json:"body"`
 }
 
 func (c *Client) Read() {
@@ -34,28 +35,36 @@ func (c *Client) Read() {
 
 	for {
 		// Handle message from WebClient
-		var starter StarterIncoming
-		err := c.Conn.ReadJSON(&starter)
+		var incoming RequestIncoming
+		err := c.Conn.ReadJSON(&incoming)
 
 		if err != nil {
 			log.Println(err)
 			return
 		}
 
-		// handle incoming message to get an appropiate outcoming message
-		response := &StarterOutcoming{}
+		response := &RequestOutcoming{Body: make(map[string]interface{})}
 
-		switch starter.StarterId {
-			case 1:
-				response.StarterName = "Bulbasaur"
-			case 4:
-				response.StarterName = "Squirtle"
-			case 7:
-				response.StarterName = "Charmander"
+		if team, ok := incoming.Body["team"]; ok {
+			var jsonRepo = repo.GetJsonInstance()
+
+			teamMembers := []string{}
+			for _, v := range(team) {
+				// Idk why is coming as float64 number ._.
+				pokemonId := int(v.(float64))
+
+				if pokemon, ok := jsonRepo.PokemonMap[pokemonId]; ok {
+					teamMembers = append(teamMembers, pokemon.Name)
+				} else {
+					teamMembers = append(teamMembers, "")
+				}
+			}
+
+			fmt.Printf("Team: %v \n", teamMembers)
+			response.Body["team"] = teamMembers
 		}
 
-		message := Message{Body: response}
-		c.Pool.Broadcast <- message
-		fmt.Printf("Message Received: %+v\n", message)
+		c.Pool.Broadcast <- *response
+		fmt.Printf("Message Received: %+v\n", incoming)
 	}
 }

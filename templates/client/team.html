@@ -14,12 +14,26 @@
     </style>
   </head>
   <body>
-    <h2>My current starter</h2>
+    <h2>My current team</h2>
 
     <div>
-      <p>My starter is: <span id="starter"></span></p>
       <div>
-        <img id="starterPic" src=""/>
+        <img id="pokemon1" src=""/>
+      </div>
+      <div>
+        <img id="pokemon2" src=""/>
+      </div>
+      <div>
+        <img id="pokemon3" src=""/>
+      </div>
+      <div>
+        <img id="pokemon4" src=""/>
+      </div>
+      <div>
+        <img id="pokemon5" src=""/>
+      </div>
+      <div>
+        <img id="pokemon6" src=""/>
       </div>
     </div>
 
@@ -44,13 +58,15 @@
         socket.addEventListener('message', function (event) {
           console.log('Message from server', event.data);
           const dataDecoded = JSON.parse(event.data);
-          if (dataDecoded['body']['starterName'] != null) {
-            const starterName = dataDecoded['body']['starterName'];
-            document.getElementById("starter").innerHTML = starterName;
-            document.getElementById("starterPic").src = "/static/img/"+starterName+".gif"
+          console.info(event.data)
+          if (dataDecoded['body']['team'] != null) {
+            const team = dataDecoded['body']['team'];
+            console.info(team)
+            document.getElementById("pokemon1").src = "/static/img/"+team[0]+".gif"
+            document.getElementById("pokemon2").src = "/static/img/"+team[1]+".gif"
+            document.getElementById("pokemon3").src = "/static/img/"+team[2]+".gif"
           } else {
-            document.getElementById("starter").innerHTML = "";
-            document.getElementById("starterPic").src = "";
+            document.getElementById("pokemon1").src = "";
           }
         });
 

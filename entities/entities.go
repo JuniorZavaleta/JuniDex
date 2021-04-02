@@ -1,16 +1,10 @@
 package entities
 
-type PokemonType struct {
-	Id   int
-	Name string
-
-	IsSuperEffective []PokemonType
-}
-
 type Pokemon struct {
-	Name    string
-	TypeOne *PokemonType
-	TypeTwo *PokemonType
+	Id      int    `json:"id"`
+	Name    string `json:"name"`
+	TypeOne string `json:"type1"`
+	TypeTwo string `json:"type2"`
 }
 
 type PokemonSocketData struct {
