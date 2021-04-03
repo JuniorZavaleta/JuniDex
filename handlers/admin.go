@@ -3,6 +3,7 @@ package handlers
 import (
 	"html/template"
 	"junidex/helpers"
+	"junidex/repo"
 	"log"
 	"net/http"
 
@@ -35,8 +36,10 @@ func (h *AdminHandler) adminView(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *AdminHandler) teamView(w http.ResponseWriter, r *http.Request) {
-	// TODO: Should load team in database
-	team := &PokemonTeam{}
+	// TODO: Should load more data about pokemon team - for now just names
+	// team := &PokemonTeam{}
+
+	team := repo.LoadTeam()
 	t, err := template.ParseFiles(helpers.GetTemplateFilepath("admin", "team.html"))
 
 	if err != nil {

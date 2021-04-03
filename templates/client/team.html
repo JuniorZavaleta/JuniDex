@@ -14,7 +14,7 @@
 
       .wrapper {
         display: grid;
-        grid-template-columns: repeat(2, 120px);
+        grid-template-columns: repeat(2, 125px);
         grid-gap: 10px;
       }
 
@@ -43,24 +43,15 @@
     <!-- <h2>My current team</h2> -->
 
     <div class="wrapper">
+      {{ range $i, $p := .Team }}
       <div class="pokemon">
-        <img id="pokemon1" src=""/>
+        {{ if eq $p "" }}
+          <img id="pokemon{{$i}}" src="/static/img/blank.gif"/>
+        {{ else }}
+          <img id="pokemon{{$i}}" src="/static/img/{{ $p }}.gif"/>
+        {{ end }}
       </div>
-      <div class="pokemon">
-        <img id="pokemon2" src=""/>
-      </div>
-      <div class="pokemon">
-        <img id="pokemon3" src=""/>
-      </div>
-      <div class="pokemon">
-        <img id="pokemon4" src=""/>
-      </div>
-      <div class="pokemon">
-        <img id="pokemon5" src=""/>
-      </div>
-      <div class="pokemon">
-        <img id="pokemon6" src=""/>
-      </div>
+      {{ end }}
     </div>
 
     <script>

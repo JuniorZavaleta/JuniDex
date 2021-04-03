@@ -59,3 +59,20 @@ func SaveTeam(teamMembers []string) {
 	ioutil.WriteFile("data/team.json", jsonString, os.ModePerm)
 	log.Println("Team saved.")
 }
+
+func LoadTeam() []string {
+	jsonFile, err := os.Open("data/team.json")
+
+	if err != nil {
+		return []string{}
+	}
+
+	defer jsonFile.Close()
+
+	byteValue, _ := ioutil.ReadAll(jsonFile)
+	var teamMembers []string
+
+	json.Unmarshal(byteValue, &teamMembers)
+
+	return teamMembers
+}
