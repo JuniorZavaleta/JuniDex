@@ -19,7 +19,7 @@ type Message struct {
 	Body interface{} `json:"body"`
 }
 
-type RequestIncoming struct {
+type Request struct {
 	Body map[string][]interface{} `json:"body"`
 }
 
@@ -35,7 +35,7 @@ func (c *Client) Read() {
 
 	for {
 		// Handle message from WebClient
-		var incoming RequestIncoming
+		var incoming Request
 		err := c.Conn.ReadJSON(&incoming)
 
 		if err != nil {
@@ -56,7 +56,7 @@ func (c *Client) Read() {
 	}
 }
 
-func HandleTeam(i RequestIncoming, o *Response, team []interface{}) {
+func HandleTeam(i Request, o *Response, team []interface{}) {
 	var jsonRepo = repo.GetJsonInstance()
 
 	teamMembers := []string{}
@@ -73,9 +73,10 @@ func HandleTeam(i RequestIncoming, o *Response, team []interface{}) {
 
 	fmt.Printf("Team: %v \n", teamMembers)
 	o.Body["team"] = teamMembers
+	repo.SaveTeam(teamMembers)
 }
 
-func HandleStarter(i RequestIncoming, o *Response, starter interface{}) {
+func HandleStarter(i Request, o *Response, starter interface{}) {
 	var jsonRepo = repo.GetJsonInstance()
 
 	pokemonId := int(starter.(float64))

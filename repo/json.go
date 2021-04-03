@@ -51,3 +51,11 @@ func InitJsonRepository() map[int]entities.Pokemon {
 
 	return pokemonMap
 }
+
+func SaveTeam(teamMembers []string) {
+	jsonString, _ := json.Marshal(teamMembers)
+
+	log.Println("Saving Team locally...")
+	ioutil.WriteFile("data/team.json", jsonString, os.ModePerm)
+	log.Println("Team saved.")
+}

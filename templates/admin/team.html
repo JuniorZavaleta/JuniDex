@@ -16,6 +16,11 @@
         <option value="1">Bulbasaur</option>
         <option value="4">Squirtle</option>
         <option value="7">Charmander</option>
+        <option value="20">Butterfree</option>
+        <option value="21">Heracross</option>
+        <option value="22">Ariados</option>
+        <option value="23">Pineco</option>
+        <option value="24"></option>
       </select>
     </div>
     <div>
@@ -24,6 +29,11 @@
         <option value="2">Ivysaur</option>
         <option value="5">Wartortle</option>
         <option value="8">Charmeleon</option>
+        <option value="20">Butterfree</option>
+        <option value="21">Heracross</option>
+        <option value="22">Ariados</option>
+        <option value="23">Pineco</option>
+        <option value="24"></option>
       </select>
     </div>
     <div>
@@ -32,6 +42,50 @@
         <option value="1">Bulbasaur</option>
         <option value="4">Squirtle</option>
         <option value="7">Charmander</option>
+        <option value="20">Butterfree</option>
+        <option value="21">Heracross</option>
+        <option value="22">Ariados</option>
+        <option value="23">Pineco</option>
+        <option value="24"></option>
+      </select>
+    </div>
+    <div>
+      <label>Pokemon 4</label>
+      <select id="pokemon4">
+        <option value="1">Bulbasaur</option>
+        <option value="4">Squirtle</option>
+        <option value="7">Charmander</option>
+        <option value="20">Butterfree</option>
+        <option value="21">Heracross</option>
+        <option value="22">Ariados</option>
+        <option value="23">Pineco</option>
+        <option value="24"></option>
+      </select>
+    </div>
+    <div>
+      <label>Pokemon 5</label>
+      <select id="pokemon5">
+        <option value="1">Bulbasaur</option>
+        <option value="4">Squirtle</option>
+        <option value="7">Charmander</option>
+        <option value="20">Butterfree</option>
+        <option value="21">Heracross</option>
+        <option value="22">Ariados</option>
+        <option value="23">Pineco</option>
+        <option value="24"></option>
+      </select>
+    </div>
+    <div>
+      <label>Pokemon 6</label>
+      <select id="pokemon6">
+        <option value="1">Bulbasaur</option>
+        <option value="4">Squirtle</option>
+        <option value="7">Charmander</option>
+        <option value="20">Butterfree</option>
+        <option value="21">Heracross</option>
+        <option value="22">Ariados</option>
+        <option value="23">Pineco</option>
+        <option value="24"></option>
       </select>
     </div>
 
@@ -55,6 +109,9 @@
         var pokemon1 = document.getElementById("pokemon1");
         var pokemon2 = document.getElementById("pokemon2");
         var pokemon3 = document.getElementById("pokemon3");
+        var pokemon4 = document.getElementById("pokemon4");
+        var pokemon5 = document.getElementById("pokemon5");
+        var pokemon6 = document.getElementById("pokemon6");
         let team = [0,0,0,0,0,0]
 
         function updatePokemonTeam (team) {
@@ -73,6 +130,21 @@
 
         pokemon3.addEventListener('change', (event) => {
           team[2] = parseInt(event.target.value);
+          updatePokemonTeam(team);
+        });
+
+        pokemon4.addEventListener('change', (event) => {
+          team[3] = parseInt(event.target.value);
+          updatePokemonTeam(team);
+        });
+
+        pokemon5.addEventListener('change', (event) => {
+          team[4] = parseInt(event.target.value);
+          updatePokemonTeam(team);
+        });
+
+        pokemon6.addEventListener('change', (event) => {
+          team[5] = parseInt(event.target.value);
           updatePokemonTeam(team);
         });
     </script>
