@@ -20,6 +20,7 @@ This application wants to give the ability to Pokemon streamers to have a local 
         ```
         setx DIR_TEMPLATE "D:\pokemon\junidex\templates"
         setx STATIC_FOLDER "D:\pokemon\junidex\static"
+        setx DATA_FOLDER "D:\pokemon\junidex\data"
         ```
 - Read about sprites to fulfill your static folder, after that you can start the server executing `junidex.exe`
 

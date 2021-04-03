@@ -17,13 +17,14 @@ func HandlerPing(w http.ResponseWriter, req *http.Request) {
 	w.Write([]byte("pong"))
 }
 
-const version = "0.1.1-SNAPSHOT"
+const version = "0.2.1"
 
 func main() {
 	// Checking directory for html templates
 	fmt.Printf("Version: \t%s\n", version)
 	fmt.Printf("DIR TEMPLATE: %s\n", os.Getenv("DIR_TEMPLATE"))
 	fmt.Printf("STATIC FOLDER: %s\n", os.Getenv("STATIC_FOLDER"))
+	fmt.Printf("DATA FOLDER: %s\n", os.Getenv("DATA_FOLDER"))
 
 	// Starting pool
 	pool := ws.NewPool()

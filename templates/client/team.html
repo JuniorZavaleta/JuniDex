@@ -81,9 +81,9 @@
             console.info(team)
             for (var i = 0; i < 6; i++) {
               if (team[i] == "") {
-                document.getElementById("pokemon"+(i+1)).src = "/static/img/blank.jpg";
+                document.getElementById("pokemon"+i).src = "/static/img/blank.jpg";
               } else {
-                document.getElementById("pokemon"+(i+1)).src = "/static/img/"+team[i]+".gif"
+                document.getElementById("pokemon"+i).src = "/static/img/"+team[i]+".gif"
               }
             }
           }

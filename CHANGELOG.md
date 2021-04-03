@@ -1,5 +1,14 @@
 # CHANGELOG
 
+[0.3.0] XXXX-XX-XX
+- Load all pokemon available in json file and team selected saved
+
+[0.2.1] 2021-04-03
+> Fixed
+- Saving and loading team using build for Windows - raise errors
+- Index in template
+- Admin was reseting team (array of zeros) - noticed when the client enters first (Now both load current team)
+
 [0.2.0] 2021-04-03
 > Added
 - Save Team in a json file locally

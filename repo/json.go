@@ -7,10 +7,12 @@ import (
 	"junidex/entities"
 	"log"
 	"os"
+	"path/filepath"
 )
 
 type PokemonJsonRepository struct {
 	PokemonMap map[int]entities.Pokemon
+	PokemonMapName map[string]entities.Pokemon
 }
 
 var repository PokemonJsonRepository
@@ -19,18 +21,23 @@ func GetJsonInstance() PokemonJsonRepository {
 	if repository.PokemonMap == nil {
 		fmt.Println("Setting up JSON repository")
 
-		repository = PokemonJsonRepository{InitJsonRepository()}
+		repository = InitJsonRepository()
 		return repository
 	}
 
 	return repository
 }
 
-func InitJsonRepository() map[int]entities.Pokemon {
+func GetDataFilePath(file string) string {
+	return filepath.Join(os.Getenv("DATA_FOLDER"), file)
+}
+
+func InitJsonRepository() PokemonJsonRepository {
 	pokemonMap := make(map[int]entities.Pokemon)
+	pokemonMapName := make(map[string]entities.Pokemon)
 
 	// Load json
-	jsonFile, err := os.Open("./data/pokemon.json")
+	jsonFile, err := os.Open(GetDataFilePath("pokemon.json"))
 
 	if err != nil {
 		log.Panic("Error accesing json file.")
@@ -47,21 +54,22 @@ func InitJsonRepository() map[int]entities.Pokemon {
 	json.Unmarshal(byteValue, &pokemonList)
 	for _, pokemon := range pokemonList {
 		pokemonMap[pokemon.Id] = pokemon
+		pokemonMapName[pokemon.Name] = pokemon
 	}
 
-	return pokemonMap
+	return PokemonJsonRepository{PokemonMap: pokemonMap, PokemonMapName: pokemonMapName}
 }
 
 func SaveTeam(teamMembers []string) {
 	jsonString, _ := json.Marshal(teamMembers)
 
 	log.Println("Saving Team locally...")
-	ioutil.WriteFile("data/team.json", jsonString, os.ModePerm)
+	ioutil.WriteFile(GetDataFilePath("team.json"), jsonString, os.ModePerm)
 	log.Println("Team saved.")
 }
 
 func LoadTeam() []string {
-	jsonFile, err := os.Open("data/team.json")
+	jsonFile, err := os.Open(GetDataFilePath("team.json"))
 
 	if err != nil {
 		return []string{}
