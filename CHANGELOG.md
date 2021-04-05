@@ -3,6 +3,10 @@
 [0.3.0] XXXX-XX-XX
 - Load all pokemon available in json file and team selected saved
 
+[0.2.2] 2021-04-04
+> Fixed
+- Use blank.gif instead of blank.jpg in `client/team.html`
+
 [0.2.1] 2021-04-03
 > Fixed
 - Saving and loading team using build for Windows - raise errors
