@@ -3,6 +3,7 @@ package handlers
 import (
 	"encoding/json"
 	"junidex/entities"
+	"junidex/repo"
 	"log"
 	"net/http"
 
@@ -17,6 +18,7 @@ func NewRestHandler(r *mux.Router) {
 	handler := &HttpRestHandler{}
 
 	r.HandleFunc("/pokemon/{id}", handler.GetPokemon).Methods("GET")
+	r.HandleFunc("/api/team", handler.GetTeam).Methods("GET")
 }
 
 func (h *HttpRestHandler) GetPokemon(w http.ResponseWriter, req *http.Request) {
@@ -31,4 +33,16 @@ func (h *HttpRestHandler) GetPokemon(w http.ResponseWriter, req *http.Request) {
 	bulbasaur.TypeTwo = "Poison"
 
 	json.NewEncoder(w).Encode(bulbasaur)
+}
+
+func (h *HttpRestHandler) GetTeam(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+
+	log.Printf("Loading Team...\n");
+
+	team := repo.LoadTeam()
+	log.Printf("Team loaded: %v", team)
+
+	json.NewEncoder(w).Encode(team)
 }

@@ -78,9 +78,14 @@ func LoadTeam() []string {
 	defer jsonFile.Close()
 
 	byteValue, _ := ioutil.ReadAll(jsonFile)
-	var teamMembers []string
+	var team []string
 
-	json.Unmarshal(byteValue, &teamMembers)
+	json.Unmarshal(byteValue, &team)
 
-	return teamMembers
+	if len(team) == 0 {
+		// If team not found, set 6 blank strings
+		team = []string{"", "", "", "", "", ""}
+	}
+
+	return team
 }

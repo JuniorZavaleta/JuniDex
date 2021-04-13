@@ -17,7 +17,7 @@ func HandlerPing(w http.ResponseWriter, req *http.Request) {
 	w.Write([]byte("pong"))
 }
 
-const version = "0.2.2"
+const version = "0.3.0-SNAPSHOT"
 
 func main() {
 	// Checking directory for html templates

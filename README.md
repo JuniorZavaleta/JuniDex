@@ -8,7 +8,7 @@ This application wants to give the ability to Pokemon streamers to have a local 
  - Evolves a Pokemon
  - Drop a Pokemon in box
  - Change positions
-- Save your team locally
+- Save your team locally (Done)
  - Here will be two implementations, one for me (for fun using graphs - neo4j) and the other with json for users
 - Show possible counters for the current team
 
