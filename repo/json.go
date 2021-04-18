@@ -89,3 +89,12 @@ func LoadTeam() []string {
 
 	return team
 }
+
+func LoadAll() []entities.Pokemon {
+	var pokemonList []entities.Pokemon
+	for _, pokemon := range GetJsonInstance().PokemonMap {
+		pokemonList = append(pokemonList, pokemon)
+	}
+
+	return pokemonList
+}

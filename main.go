@@ -38,8 +38,6 @@ func main() {
 	// Adding Websocekt handler
 	handlers.NewWebsocketHandler(r, pool)
 
-	// Adding Admin Html handler
-	handlers.NewAdminHandler(r)
 	// Adding Client Html handler
 	handlers.NewClientHandler(r)
 	// Adding Static folder handler

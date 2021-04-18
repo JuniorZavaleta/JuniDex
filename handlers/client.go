@@ -16,7 +16,7 @@ type ClientHandler struct {
 func NewClientHandler(r *mux.Router) {
 	handler := &ClientHandler{}
 
-	r.HandleFunc("/app", handler.IndexView).Methods("GET")
+	r.HandleFunc("/", handler.IndexView).Methods("GET")
 }
 
 func (h *ClientHandler) IndexView(w http.ResponseWriter, r *http.Request) {
