@@ -90,6 +90,17 @@ func LoadTeam() []string {
 	return team
 }
 
+func LoadTeamIds() []int {
+	var team = LoadTeam()
+	var teamIds []int
+
+	for _, pokemon := range team {
+		teamIds = append(teamIds, GetJsonInstance().PokemonMapName[pokemon].Id)
+	}
+
+	return teamIds
+}
+
 func LoadAll() []entities.Pokemon {
 	var pokemonList []entities.Pokemon
 	for _, pokemon := range GetJsonInstance().PokemonMap {
