@@ -5,7 +5,14 @@
 ## [0.4.0] XXXX-XX-XX
 - Using project junidex-ui to handle all the UI
 
-## [0.3.0] XXXX-XX-XX
+## [0.3.1] 2021-04-19
+> Changed
+- Load Pokemon team as object, not just names
+
+> Fixed
+- Some data in `pokemon.json`
+
+## [0.3.0] 2021-04-16
 > Added
 - Load all pokemon available in json file in admin view
 - Using project junidex-ui to handle UI for APP

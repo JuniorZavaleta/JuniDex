@@ -68,7 +68,7 @@ func SaveTeam(teamMembers []string) {
 	log.Println("Team saved.")
 }
 
-func LoadTeam() []string {
+func LoadTeamString() []string {
 	jsonFile, err := os.Open(GetDataFilePath("team.json"))
 
 	if err != nil {
@@ -90,8 +90,18 @@ func LoadTeam() []string {
 	return team
 }
 
+func LoadTeam() []entities.Pokemon {
+	var team []entities.Pokemon
+
+	for _, pokemon := range LoadTeamString() {
+		team = append(team, GetJsonInstance().PokemonMapName[pokemon])
+	}
+
+	return team
+}
+
 func LoadTeamIds() []int {
-	var team = LoadTeam()
+	var team = LoadTeamString()
 	var teamIds []int
 
 	for _, pokemon := range team {

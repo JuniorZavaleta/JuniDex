@@ -13,7 +13,7 @@
     },
     {
         "id": 3,
-        "name": "Vensaur",
+        "name": "Venusaur",
         "type1": "Grass",
         "type2": "Poison"
     },
@@ -63,7 +63,7 @@
         "id": 21,
         "name": "Heracross",
         "type1": "Bug",
-        "type2": "Fightning"
+        "type2": "Fighting"
     },
     {
         "id": 22,
@@ -81,6 +81,6 @@
         "id": 24,
         "name": "Shuckle",
         "type1": "Bug",
-        "type2": ""
+        "type2": "Rock"
     }
 ]
