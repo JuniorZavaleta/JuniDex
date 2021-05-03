@@ -3,7 +3,9 @@
 ## UNRELEASED
 
 ## [0.4.0] XXXX-XX-XX
-- Using project junidex-ui to handle all the UI
+> Added
+- Move Pokemon easily within the team
+- Evolves in the UI with one click
 
 ## [0.3.1] 2021-04-19
 > Changed
