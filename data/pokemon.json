@@ -4336,5 +4336,533 @@
         "name": "Volcanion",
         "type1": "Fire",
         "type2": "Water"
+    },
+    {
+        "id": 722,
+        "name": "Rowlet",
+        "type1": "Grass",
+        "type2": "Flying"
+    },
+    {
+        "id": 723,
+        "name": "Dartrix",
+        "type1": "Grass",
+        "type2": "Flying"
+    },
+    {
+        "id": 724,
+        "name": "Decidueye",
+        "type1": "Grass",
+        "type2": "Ghost"
+    },
+    {
+        "id": 725,
+        "name": "Litten",
+        "type1": "Fire",
+        "type2": ""
+    },
+    {
+        "id": 726,
+        "name": "Torracat",
+        "type1": "Fire",
+        "type2": ""
+    },
+    {
+        "id": 727,
+        "name": "Incineroar",
+        "type1": "Fire",
+        "type2": "Dark"
+    },
+    {
+        "id": 728,
+        "name": "Popplio",
+        "type1": "Water",
+        "type2": ""
+    },
+    {
+        "id": 729,
+        "name": "Brionne",
+        "type1": "Water",
+        "type2": ""
+    },
+    {
+        "id": 730,
+        "name": "Primarina",
+        "type1": "Water",
+        "type2": "Fairy"
+    },
+    {
+        "id": 731,
+        "name": "Pikipek",
+        "type1": "Normal",
+        "type2": "Flying"
+    },
+    {
+        "id": 732,
+        "name": "Trumbreak",
+        "type1": "Normal",
+        "type2": "Flying"
+    },
+    {
+        "id": 733,
+        "name": "Toucannon",
+        "type1": "Normal",
+        "type2": "Flying"
+    },
+    {
+        "id": 734,
+        "name": "Yungoos",
+        "type1": "Normal",
+        "type2": ""
+    },
+    {
+        "id": 735,
+        "name": "Gumshoos",
+        "type1": "Normal",
+        "type2": ""
+    },
+    {
+        "id": 736,
+        "name": "Grubbin",
+        "type1": "Bug",
+        "type2": ""
+    },
+    {
+        "id": 737,
+        "name": "Charjabug",
+        "type1": "Bug",
+        "type2": "Electric"
+    },
+    {
+        "id": 738,
+        "name": "Vikavolt",
+        "type1": "Bug",
+        "type2": "Electric"
+    },
+    {
+        "id": 739,
+        "name": "Crabrawler",
+        "type1": "Fighting",
+        "type2": ""
+    },
+    {
+        "id": 740,
+        "name": "Crabominable",
+        "type1": "Fighting",
+        "type2": "Ice"
+    },
+    {
+        "id": 741,
+        "name": "Oricorio",
+        "type1": "Fire/Electric/Psychic/Ghost",
+        "type2": "Flying"
+    },
+    {
+        "id": 742,
+        "name": "Cutiefly",
+        "type1": "Bug",
+        "type2": "Fairy"
+    },
+    {
+        "id": 743,
+        "name": "Ribombee",
+        "type1": "Bug",
+        "type2": "Fairy"
+    },
+    {
+        "id": 744,
+        "name": "Rockruff",
+        "type1": "Rock",
+        "type2": ""
+    },
+    {
+        "id": 745,
+        "name": "Lycanroc",
+        "type1": "Rock",
+        "type2": ""
+    },
+    {
+        "id": 746,
+        "name": "Wishiwashi",
+        "type1": "Water",
+        "type2": ""
+    },
+    {
+        "id": 747,
+        "name": "Mareanie",
+        "type1": "Poison",
+        "type2": "Water"
+    },
+    {
+        "id": 748,
+        "name": "Toxapex",
+        "type1": "Poison",
+        "type2": "Water"
+    },
+    {
+        "id": 749,
+        "name": "Mudbray",
+        "type1": "Ground",
+        "type2": ""
+    },
+    {
+        "id": 750,
+        "name": "Mudsdale",
+        "type1": "Ground",
+        "type2": ""
+    },
+    {
+        "id": 751,
+        "name": "Dewpider",
+        "type1": "Water",
+        "type2": "Bug"
+    },
+    {
+        "id": 752,
+        "name": "Araquanid",
+        "type1": "Water",
+        "type2": "Bug"
+    },
+    {
+        "id": 753,
+        "name": "Fomantis",
+        "type1": "Grass",
+        "type2": ""
+    },
+    {
+        "id": 754,
+        "name": "Lurantis",
+        "type1": "Grass",
+        "type2": ""
+    },
+    {
+        "id": 755,
+        "name": "Morelull",
+        "type1": "Grass",
+        "type2": "Fairy"
+    },
+    {
+        "id": 756,
+        "name": "Shiinotic",
+        "type1": "Grass",
+        "type2": "Fairy"
+    },
+    {
+        "id": 757,
+        "name": "Salandit",
+        "type1": "Poison",
+        "type2": "Fire"
+    },
+    {
+        "id": 758,
+        "name": "Salazzle",
+        "type1": "Poison",
+        "type2": "Fire"
+    },
+    {
+        "id": 759,
+        "name": "Stufull",
+        "type1": "Normal",
+        "type2": "Fighting"
+    },
+    {
+        "id": 760,
+        "name": "Bewear",
+        "type1": "Normal",
+        "type2": "Fighting"
+    },
+    {
+        "id": 761,
+        "name": "Bounsweet",
+        "type1": "Grass",
+        "type2": ""
+    },
+    {
+        "id": 762,
+        "name": "Steenee",
+        "type1": "Grass",
+        "type2": ""
+    },
+    {
+        "id": 763,
+        "name": "Tsareena",
+        "type1": "Grass",
+        "type2": ""
+    },
+    {
+        "id": 764,
+        "name": "Comfey",
+        "type1": "Fairy",
+        "type2": ""
+    },
+    {
+        "id": 765,
+        "name": "Oranguru",
+        "type1": "Normal",
+        "type2": "Psychic"
+    },
+    {
+        "id": 766,
+        "name": "Passimian",
+        "type1": "Fighting",
+        "type2": ""
+    },
+    {
+        "id": 767,
+        "name": "Wimpod",
+        "type1": "Bug",
+        "type2": "Water"
+    },
+    {
+        "id": 768,
+        "name": "Golisopod",
+        "type1": "Bug",
+        "type2": "Water"
+    },
+    {
+        "id": 769,
+        "name": "Sandygast",
+        "type1": "Ghost",
+        "type2": "Ground"
+    },
+    {
+        "id": 770,
+        "name": "Palossand",
+        "type1": "Ghost",
+        "type2": "Ground"
+    },
+    {
+        "id": 771,
+        "name": "Pyukumuku",
+        "type1": "Water",
+        "type2": ""
+    },
+    {
+        "id": 772,
+        "name": "Código Cero",
+        "type1": "Normal",
+        "type2": ""
+    },
+    {
+        "id": 773,
+        "name": "Silvally",
+        "type1": "Normal",
+        "type2": ""
+    },
+    {
+        "id": 774,
+        "name": "Minior",
+        "type1": "Rock",
+        "type2": "Flying"
+    },
+    {
+        "id": 775,
+        "name": "Komala",
+        "type1": "Normal",
+        "type2": ""
+    },
+    {
+        "id": 776,
+        "name": "Turtonator",
+        "type1": "Fire",
+        "type2": "Dragon"
+    },
+    {
+        "id": 777,
+        "name": "Togedemaru",
+        "type1": "Electric",
+        "type2": "Steel"
+    },
+    {
+        "id": 778,
+        "name": "Mimikyu",
+        "type1": "Ghost",
+        "type2": "Fairy"
+    },
+    {
+        "id": 779,
+        "name": "Bruxish",
+        "type1": "Water",
+        "type2": "Psychic"
+    },
+    {
+        "id": 780,
+        "name": "Drampa",
+        "type1": "Normal",
+        "type2": "Dragon"
+    },
+    {
+        "id": 781,
+        "name": "Dhelmise",
+        "type1": "Ghost",
+        "type2": "Grass"
+    },
+    {
+        "id": 782,
+        "name": "Jangmo-o",
+        "type1": "Dragon",
+        "type2": ""
+    },
+    {
+        "id": 783,
+        "name": "Hakamo-o",
+        "type1": "Dragon",
+        "type2": "Fighting"
+    },
+    {
+        "id": 784,
+        "name": "Kommo-o",
+        "type1": "Dragon",
+        "type2": "Fighting"
+    },
+    {
+        "id": 785,
+        "name": "Tapu Koko",
+        "type1": "Electric",
+        "type2": "Fairy"
+    },
+    {
+        "id": 786,
+        "name": "Tapu Lele",
+        "type1": "Psychic",
+        "type2": "Fairy"
+    },
+    {
+        "id": 787,
+        "name": "Tapu Bulu",
+        "type1": "Grass",
+        "type2": "Fairy"
+    },
+    {
+        "id": 788,
+        "name": "Tapu Fini",
+        "type1": "Water",
+        "type2": "Fairy"
+    },
+    {
+        "id": 789,
+        "name": "Cosmog",
+        "type1": "Psychic",
+        "type2": ""
+    },
+    {
+        "id": 790,
+        "name": "Cosmoem",
+        "type1": "Psychic",
+        "type2": ""
+    },
+    {
+        "id": 791,
+        "name": "Solgaleo",
+        "type1": "Psychic",
+        "type2": "Steel"
+    },
+    {
+        "id": 792,
+        "name": "Lunala",
+        "type1": "Psychic",
+        "type2": "Ghost"
+    },
+    {
+        "id": 793,
+        "name": "Nihilego",
+        "type1": "Rock",
+        "type2": "Poison"
+    },
+    {
+        "id": 794,
+        "name": "Buzzwole",
+        "type1": "Bug",
+        "type2": "Fighting"
+    },
+    {
+        "id": 795,
+        "name": "Pheromosa",
+        "type1": "Bug",
+        "type2": "Fighting"
+    },
+    {
+        "id": 796,
+        "name": "Xurkitree",
+        "type1": "Electric",
+        "type2": ""
+    },
+    {
+        "id": 797,
+        "name": "Celesteela",
+        "type1": "Steel",
+        "type2": "Dragon"
+    },
+    {
+        "id": 798,
+        "name": "Kartana",
+        "type1": "Grass",
+        "type2": "Steel"
+    },
+    {
+        "id": 799,
+        "name": "Guzzlord",
+        "type1": "Dark",
+        "type2": "Dragon"
+    },
+    {
+        "id": 800,
+        "name": "Necrozma",
+        "type1": "Psychic",
+        "type2": ""
+    },
+    {
+        "id": 801,
+        "name": "Magearna",
+        "type1": "Steel",
+        "type2": "Fairy"
+    },
+    {
+        "id": 802,
+        "name": "Marshadow",
+        "type1": "Fighting",
+        "type2": "Ghost"
+    },
+    {
+        "id": 803,
+        "name": "Poipole",
+        "type1": "Poison",
+        "type2": ""
+    },
+    {
+        "id": 804,
+        "name": "Naganadel",
+        "type1": "Poison",
+        "type2": "Dragon"
+    },
+    {
+        "id": 805,
+        "name": "Stakataka",
+        "type1": "Rock",
+        "type2": "Steel"
+    },
+    {
+        "id": 806,
+        "name": "Blacephalon",
+        "type1": "Fire",
+        "type2": "Ghost"
+    },
+    {
+        "id": 807,
+        "name": "Zeraora",
+        "type1": "Electric",
+        "type2": ""
+    },
+    {
+        "id": 808,
+        "name": "Meltan",
+        "type1": "Steel",
+        "type2": ""
+    },
+    {
+        "id": 809,
+        "name": "Melmetal",
+        "type1": "Steel",
+        "type2": ""
     }
 ]
